@@ -1,0 +1,23 @@
+PRINTF
+Descrption
+
+the function that we develop allows the analysis of a chain that is 
+analyzed that is parsed term by term and that depending on the special 
+characters found returns the string in a stipulated format.
+
+In the following table the characters used for the string analysis are 
+mentioned
+
+    Symbols                 format
+
+        %c          print a character
+        %d          print a decimal number (base10)
+        %in         print an integer (base10)
+        %s          print a string
+        %%          print a percentage
+
+In the this document will be mentioned examples and interactions of
+how the algorithm behaves in the cases already mentioned.
+The objective of this document is to be an interactive tool that will 
+allow the user to understand the algorithm that was used and how the 
+program is going to be will be executed under normal conditions.
