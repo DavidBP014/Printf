@@ -2,11 +2,11 @@ PRINTF
 Descrption
 
 the function that we develop allows the analysis of a chain that is 
-analyzed that is parsed term by term and that depending on the special 
-characters found returns the string in a stipulated format.
+analyzed that is parsed term by term and that depending on the 
+special characters found returns the string in a stipulated format.
 
-In the following table the characters used for the string analysis are 
-mentioned
+In the following table the characters used for the string analysis
+are mentioned
 
     Symbols                 format
 
@@ -21,3 +21,11 @@ how the algorithm behaves in the cases already mentioned.
 The objective of this document is to be an interactive tool that will 
 allow the user to understand the algorithm that was used and how the 
 program is going to be will be executed under normal conditions.
+
+example 1
+
+we have the string "hello" which is in the main, This string is
+composed of characters, each of which is printed exactly as it 
+appears.
+
+        int _printf(const char *format, ...)
