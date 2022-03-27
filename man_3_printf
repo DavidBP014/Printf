@@ -24,8 +24,28 @@ program is going to be will be executed under normal conditions.
 
 example 1
 
-we have the string "hello" which is in the main, This string is
-composed of characters, each of which is printed exactly as it 
-appears.
+we have the string "hello" which is in the main, this string is our 
+case study to understand the development of the program, this string
+in the format function this function is called in the printf.
 
         int _printf(const char *format, ...)
+
+The program is called and is told that a list of arguments will be
+used with the command va_list and that a list_argument variable will
+be used, which is a data type, then list_argument is initialized, 
+which is the one in charge of calling format.
+
+        va_start(list_argument, format);
+
+then a format check is performed by means of an if which is intended 
+to discard if format is false or in position [0] there is a "%" and 
+in position [1] there is a "%". discard if format is false or in 
+position [0] there is a "%" and in position [1] it is "\0" return 
+"-1". is "\0" return "-1".
+
+        if (!format || (format[0] == '%' && format[1] == '\0'))
+                        return (-1);
+
+performs a string analysis and enters the first if which evaluates 
+if format is false or format at position 0 is equal to % and format 
+at position 1 is equal to null.
