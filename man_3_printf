@@ -49,3 +49,49 @@ position [0] there is a "%" and in position [1] it is "\0" return
 performs a string analysis and enters the first if which evaluates 
 if format is false or format at position 0 is equal to % and format 
 at position 1 is equal to null.
+
+        if (!format || (format[0] == '%' && format[1] == '\0'))
+                        return (-1);
+
+after this step it enters a for that counts the characters and 
+compares them.
+
+        for (i = 0; format[i] != '\0'; i++)
+
+if format in the first position is equal to % perform the 
+following check, at this point check if the next position is 
+equal to % print "%" and add one to counter i.
+
+        if (format[i] == '%')
+        {
+            if (format[i + 1] == '%')
+            { _putchar('%');
+            count++;
+            i++;
+            }
+        }
+
+at this point an important guideline is made to check whether 
+the format content meets the conditions of the special characters 
+mentioned in the table above. content complies with the conditions 
+of the special characters mentioned in the table above. 
+
+        else if (text_format(format, i + 1) != NULL)
+			{
+				count += text_format(format, i + 1)(list_argument);
+				i++;
+			}
+			else
+			{
+				_putchar(format[i]);
+				count++;
+			}
+		}
+		else
+		{
+			_putchar(format[i]);
+			count++;
+		}
+	}
+	va_end(list_argument);
+	return (count);
