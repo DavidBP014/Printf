@@ -1,6 +1,11 @@
 Printf
 first c language project, create a function that prints special characters
 
+Diagrama de Flujo
+
+
+<img width="501" alt="Captura de Pantalla 2022-03-28 a la(s) 8 00 51 p m" src="https://user-images.githubusercontent.com/91141739/160511573-c1668dcc-44c2-43e1-aa07-a8973756793e.png">
+
 Objective.
 Write your own printf function
 
