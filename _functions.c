@@ -79,4 +79,3 @@ a = va_arg(list_argument, int);
 	_putchar(x + '0');
 	return (1 + b);
 }
-
