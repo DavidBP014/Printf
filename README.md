@@ -39,10 +39,9 @@ Compilations:
 
       and execute it with the command 
       ./a.out
-      
+
 SYNOPSYS
 
-        
     Print ARGUMENT(s) according to FORMAT.
 
 
@@ -77,7 +76,7 @@ SYNOPSYS
      Unsigned hexadecimal conversion in lowercase form.
 
      %X
-     Unsigned hexadecimal conversion uppercase  form.	
+     Unsigned hexadecimal conversion uppercase  form. 
 
      %r
      prints the reversed string.
