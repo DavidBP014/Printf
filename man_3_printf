@@ -2,11 +2,11 @@ PRINTF
 Descrption
 
 the function that we develop allows the analysis of a chain that is 
-analyzed that is parsed term by term and that depending on the special 
-characters found returns the string in a stipulated format.
+analyzed that is parsed term by term and that depending on the 
+special characters found returns the string in a stipulated format.
 
-In the following table the characters used for the string analysis are 
-mentioned
+In the following table the characters used for the string analysis
+are mentioned
 
     Symbols                 format
 
@@ -19,5 +19,79 @@ mentioned
 In the this document will be mentioned examples and interactions of
 how the algorithm behaves in the cases already mentioned.
 The objective of this document is to be an interactive tool that will 
-allow the user to understand the algorithm that was used and how the 
-program is going to be will be
+allow the user to understand the algorithm that was used and how the
+program is going to be will be executed under normal conditions.
+
+example 1
+
+we have the string "hello" which is in the main, this string is our 
+case study to understand the development of the program, this string
+in the format function this function is called in the printf.
+
+        int _printf(const char *format, ...)
+
+The program is called and is told that a list of arguments will be
+used with the command va_list and that a list_argument variable will
+be used, which is a data type, then list_argument is initialized, 
+which is the one in charge of calling format.
+
+        va_start(list_argument, format);
+
+then a format check is performed by means of an if which is intended 
+to discard if format is false or in position [0] there is a "%" and 
+in position [1] there is a "%". discard if format is false or in 
+position [0] there is a "%" and in position [1] it is "\0" return 
+"-1". is "\0" return "-1".
+
+        if (!format || (format[0] == '%' && format[1] == '\0'))
+                        return (-1);
+
+performs a string analysis and enters the first if which evaluates 
+if format is false or format at position 0 is equal to % and format 
+at position 1 is equal to null.
+
+        if (!format || (format[0] == '%' && format[1] == '\0'))
+                        return (-1);
+
+after this step it enters a for that counts the characters and 
+compares them.
+
+        for (i = 0; format[i] != '\0'; i++)
+
+if format in the first position is equal to % perform the 
+following check, at this point check if the next position is 
+equal to % print "%" and add one to counter i.
+
+        if (format[i] == '%')
+        {
+            if (format[i + 1] == '%')
+            { _putchar('%');
+            count++;
+            i++;
+            }
+        }
+
+at this point an important guideline is made to check whether 
+the format content meets the conditions of the special characters 
+mentioned in the table above. content complies with the conditions 
+of the special characters mentioned in the table above. 
+
+        else if (text_format(format, i + 1) != NULL)
+			{
+				count += text_format(format, i + 1)(list_argument);
+				i++;
+			}
+			else
+			{
+				_putchar(format[i]);
+				count++;
+			}
+		}
+		else
+		{
+			_putchar(format[i]);
+			count++;
+		}
+	}
+	va_end(list_argument);
+	return (count);
